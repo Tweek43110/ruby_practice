@@ -58,4 +58,75 @@ def element_times_index(numbers)
       end
     return numbers
 end
-    
+
+# returns even array from any given number
+def even_nums(max)
+    newArr = []
+    i = 0
+      while i <= max
+          if i % 2 == 0
+            newArr << i
+          end
+                i+=1
+        end
+       return newArr
+      end
+
+# find the range between two numbers
+def range(min, max)
+    newArr = []
+    i = min
+    while i <= max
+        newArr << i
+        i +=1
+    end
+    return newArr
+    end
+
+# find the odd number in an array
+def odd_range(min, max)
+    newArr = []
+    i = min
+      while i <= max
+       if i % 2 != 0
+         newArr << i
+       end
+       i += 1
+      end
+      return newArr
+    end
+
+# reverse range excluding min and max
+def reverse_range(min, max)
+    newArr = []
+    i = max - 1
+    while i >= min +1
+      newArr << i
+      i -= 1
+    end
+    return newArr
+  end
+
+# return first half of array, round up if odd
+def first_half(array)
+    i = 0
+    newArr = []
+    while i < array.length / 2.0
+      newArr << array[i]
+      i += 1
+    end
+    return newArr
+  end
+
+# return the factors of the number entered
+def factors_of(num)
+    i = 1
+    newArr = []
+    while i <= num
+      if num % i == 0
+          newArr << i
+      end
+      i += 1
+    end
+    return newArr
+  end
