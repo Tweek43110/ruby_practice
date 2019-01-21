@@ -130,3 +130,53 @@ def factors_of(num)
     end
     return newArr
   end
+
+# returns array with only odd numbers from original
+def select_odds(numbers)
+    i = 0
+    newArr = []
+    while i < numbers.length
+      if numbers[i] % 2 != 0
+        newArr << numbers[i]
+      end
+      i += 1
+    end
+    return newArr
+  end
+
+# select words from an array that are longer than 4 letters
+def select_long_words(words)
+    i = 0
+    newArr = []
+    while i < words.length
+      if words[i].length > 4
+        newArr << words[i]
+      end
+      i += 1
+    end
+    return newArr
+  end
+
+# summing two arrays together
+def sum_elements(arr1, arr2)
+    i = 0
+    newArr = []
+    while i < arr1.length
+      newArr << arr1[i] + arr2[i]
+      i += 1
+    end
+    return newArr
+  end
+
+# fizz buzz; method returns array from argument thet contains all numbers divisible by 4 or 6 but not both
+def fizz_buzz(max)
+	i = 0
+	newArr = []
+  	while i < max
+      if (i % 4 == 0 || i % 6 == 0) && !(i % 4 == 0 && i % 6 == 0)
+        newArr << i
+      end
+      i += 1
+    end
+  return newArr
+end
