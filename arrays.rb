@@ -197,3 +197,10 @@ someArr.index("LA") # return the index position of the argument
 someArr.index("NJ") # returns nothing since info is not in the array
 someArr.include?("OK") # returns boolean value //false
 someArr.include?("S") # returns true because it is in a string
+
+# reverse
+puts someArr.reverse # reverses the array on display
+arr.reverse! # saves the array as reversed
+def palindrome(word)
+	return word == word.reverse #true
+end
