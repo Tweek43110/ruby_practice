@@ -180,3 +180,20 @@ def fizz_buzz(max)
     end
   return newArr
 end
+
+# .push, .pop, .unshift, .shift
+
+games = ["ARMA", "Mad Max", "Fallout"]
+games.push("Half Life") # pushes to end of array, can push multiple values unlinke shovel <<
+games.push("Crysis", "Left 4 Dead", "Deus Ex")
+games.pop() # or games.pop removes the last index of the array
+games.unshift("Deus Ex") # adds index to the front of the array
+games.shift() # removes the first index of the array
+
+# index, include
+
+someArr = ["SF", "LA", "NY"]
+someArr.index("LA") # return the index position of the argument
+someArr.index("NJ") # returns nothing since info is not in the array
+someArr.include?("OK") # returns boolean value //false
+someArr.include?("S") # returns true because it is in a string
