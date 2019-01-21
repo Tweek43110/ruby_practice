@@ -26,3 +26,36 @@ def printArr(arr)
 end
 
 printArr(names)
+
+# doubles the numbers in an array
+def doubler(numbers)
+    i = 0
+      while i < numbers.length
+        numbers[i] = numbers[i] * 2
+        i += 1
+      end
+    return numbers
+end
+
+# add an exclamation point to the end of every array
+def yell(words)
+    i = 0
+      while i < words.length
+        words[i] = words[i] + "!"
+        i+= 1
+      end
+    return words
+end
+
+# multiply array index by index number
+def element_times_index(numbers)
+    i = 0
+    count = 0
+      while i < numbers.length
+        numbers[i] = numbers[i] * count
+        count += 1
+        i += 1
+      end
+    return numbers
+end
+    
