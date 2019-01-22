@@ -226,3 +226,20 @@ another_str.split("") # splits every character into an array
 some_other_array = ["hello", "how", "are", "you"]
 some_other_array.join(" ") # jins the array by putting a space between
 some_other_array.join("_") # underscores between each word
+
+# enumerals
+months = ["Jan", "Feb", "Mar", "Apr"]
+months.each { |month| puts month } # automatically iterates through
+#each array index
+months.each do |month| # another way to iterate, can run multiple outputs
+  puts months
+end
+months.each_with_index do |month, index| # returns index content and place
+  puts month #iterates through index
+  puts index #displays index number
+end
+
+sentence = "hello world"
+sentence.each_char do |char| # can iterate through character in strings too
+  puts char
+end
