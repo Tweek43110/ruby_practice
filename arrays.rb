@@ -168,7 +168,8 @@ def sum_elements(arr1, arr2)
     return newArr
   end
 
-# fizz buzz; method returns array from argument thet contains all numbers divisible by 4 or 6 but not both
+# fizz buzz; method returns array from argument thet contains all numbers
+# divisible by 4 or 6 but not both
 def fizz_buzz(max)
 	i = 0
 	newArr = []
@@ -184,7 +185,8 @@ end
 # .push, .pop, .unshift, .shift
 
 games = ["ARMA", "Mad Max", "Fallout"]
-games.push("Half Life") # pushes to end of array, can push multiple values unlinke shovel <<
+games.push("Half Life") # pushes to end of array, can push multiple values
+#unlike shovel <<
 games.push("Crysis", "Left 4 Dead", "Deus Ex")
 games.pop() # or games.pop removes the last index of the array
 games.unshift("Deus Ex") # adds index to the front of the array
@@ -204,3 +206,23 @@ arr.reverse! # saves the array as reversed
 def palindrome(word)
 	return word == word.reverse #true
 end
+
+# slicing
+
+new_array = ["a", "b", "c", "d", "e"]
+new_array[1..3] #returns the start and end indeces
+new_array[1...3] #returns everythign except the last index selected
+
+some_str = "bootcamp"
+print some_str[1..-1] # works on strings as well, -1 ends at last char
+
+# split, join
+another_str = "follow the yellow brick road"
+print #array
+another_str.split("the") #splits at word "the" and makes array out of
+#things to the left and the right of it
+another_str.split("") # splits every character into an array
+
+some_other_array = ["hello", "how", "are", "you"]
+some_other_array.join(" ") # jins the array by putting a space between
+some_other_array.join("_") # underscores between each word
