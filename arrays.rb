@@ -228,6 +228,8 @@ some_other_array.join(" ") # jins the array by putting a space between
 some_other_array.join("_") # underscores between each word
 
 # ENUMERABLES
+
+# each to iterate
 months = ["Jan", "Feb", "Mar", "Apr"]
 months.each { |month| puts month } # automatically iterates through
 #each array index
@@ -248,7 +250,7 @@ puts char
 puts index
 end
 
-# ranges
+# range enumerable
 
 chomp = [1,2,3,4,5,6]
 chomp.each {|num| puts num} #iterates but doesnt provide range
@@ -271,3 +273,34 @@ def fizzBuzz(max)
 end
 
 puts fizzBuzz(20)
+
+# times enumerable
+(0..3).each {puts "hello"} #loops and prints "hello" as many times as range
+#easier method
+4.times {puts "hi"} #does same thing as above code
+
+# NESTED loops
+#a loop in a loop
+
+(1..3).each do |num1|
+  puts num1
+  (1..4) each do |num2|
+    puts "  " + num2.to_s
+  end
+end
+
+alpha = ["a", "b", "c", "d", "e"]
+
+# iterate all possible pairs with duplicates
+alpha.each do |ele1|
+  alpha.each do |ele2|
+    puts ele1 + ele2
+  end
+end
+
+# iterate through with unique pairs
+alpha.each_with_index do |ele1, idx1|
+  alpha.each_with_index do |ele2, idx2|
+    puts ele1 + ele2
+  end
+end
