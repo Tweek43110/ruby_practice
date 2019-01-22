@@ -326,3 +326,19 @@ arr.each do |subArray|
     puts element #prints elements in the array
   end
 end
+
+# convert name to initials
+def to_initials(name)
+  newName = name.split(" ")
+  initials = ""
+  newName.each { |part| ititials += part[0]}
+  return initials
+
+  # first to appear in array
+  def first_in_array(arr, el1, el2)
+ if arr.index(el1) < arr.index(el2)
+    return el1
+  else
+    return el2
+  end
+end
