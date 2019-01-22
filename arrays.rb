@@ -301,6 +301,28 @@ end
 # iterate through with unique pairs
 alpha.each_with_index do |ele1, idx1|
   alpha.each_with_index do |ele2, idx2|
-    puts ele1 + ele2
+    if idx2 > idx1 #
+      puts ele1 + ele2
+    end
+  end
+end
+
+# 2D arrays
+
+pop_arr = [
+  ["a", "b", "c"],
+  ["d", "e"],
+  ["f", "g", "h"]
+]
+
+print pop_arr[0] #prints first index of array, which is a sub-array
+subArr = pop_arr[1] # or
+pop_arr[1][1] # second sub-array,second index in array //"e"
+
+arr.each do |subArray|
+  print subArray # prints the whole arrays
+  puts
+  subArray.each do |element|
+    puts element #prints elements in the array
   end
 end
