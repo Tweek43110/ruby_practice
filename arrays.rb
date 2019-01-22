@@ -227,13 +227,13 @@ some_other_array = ["hello", "how", "are", "you"]
 some_other_array.join(" ") # jins the array by putting a space between
 some_other_array.join("_") # underscores between each word
 
-# enumerals
+# ENUMERABLES
 months = ["Jan", "Feb", "Mar", "Apr"]
 months.each { |month| puts month } # automatically iterates through
 #each array index
 months.each do |month| # another way to iterate, can run multiple outputs
   puts months
-end
+end #requires end to stop
 months.each_with_index do |month, index| # returns index content and place
   puts month #iterates through index
   puts index #displays index number
@@ -243,3 +243,31 @@ sentence = "hello world"
 sentence.each_char do |char| # can iterate through character in strings too
   puts char
 end
+sentence.each_char.withindex do |char, index| #slightly different syntax from arrays
+puts char
+puts index
+end
+
+# ranges
+
+chomp = [1,2,3,4,5,6]
+chomp.each {|num| puts num} #iterates but doesnt provide range
+(1..10).each {|num| puts num} #() represent range, cleaner code
+# can use ... in range as well
+
+#fizz buzz recreation from above
+def fizzBuzz(max)
+  arr = []
+  (1...max).each do |num|
+    if num % 3 == 0 && num % 5 !==0
+      arr << num
+    end
+    if num % 3 !== 0 && num % 5 ==0
+      arr << num
+    end
+    puts num
+  end
+  return arr
+end
+
+puts fizzBuzz(20)
